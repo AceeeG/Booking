@@ -1,6 +1,6 @@
 ﻿namespace Booking
 {
-    partial class Form1
+    partial class MainMenu
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -34,7 +34,7 @@
             this.CheckOutDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.CheckInDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.FIOTextBox = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CardCheckButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.StatusDataGridView = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,6 +52,8 @@
             this.BuzyButton = new System.Windows.Forms.RadioButton();
             this.AvailableButton = new System.Windows.Forms.RadioButton();
             this.ReservedButton = new System.Windows.Forms.RadioButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ReserveButton = new System.Windows.Forms.Button();
             this.GuestCardPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StatusDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +61,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // GuestCardPanel
@@ -69,16 +72,16 @@
             this.GuestCardPanel.Controls.Add(this.CheckOutDateTimePicker);
             this.GuestCardPanel.Controls.Add(this.CheckInDateTimePicker);
             this.GuestCardPanel.Controls.Add(this.FIOTextBox);
-            this.GuestCardPanel.Controls.Add(this.button1);
+            this.GuestCardPanel.Controls.Add(this.CardCheckButton);
             this.GuestCardPanel.Controls.Add(this.label6);
             this.GuestCardPanel.Controls.Add(this.StatusDataGridView);
             this.GuestCardPanel.Controls.Add(this.label5);
             this.GuestCardPanel.Controls.Add(this.pictureBox1);
             this.GuestCardPanel.Controls.Add(this.label4);
             this.GuestCardPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.GuestCardPanel.Location = new System.Drawing.Point(601, 0);
+            this.GuestCardPanel.Location = new System.Drawing.Point(600, 0);
             this.GuestCardPanel.Name = "GuestCardPanel";
-            this.GuestCardPanel.Size = new System.Drawing.Size(367, 561);
+            this.GuestCardPanel.Size = new System.Drawing.Size(368, 561);
             this.GuestCardPanel.TabIndex = 0;
             // 
             // label8
@@ -128,19 +131,19 @@
             this.FIOTextBox.TabIndex = 14;
             this.FIOTextBox.Text = "";
             // 
-            // button1
+            // CardCheckButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Location = new System.Drawing.Point(170, 492);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 66);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Просмотр карточки";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.CardCheckButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CardCheckButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.CardCheckButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CardCheckButton.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.CardCheckButton.Location = new System.Drawing.Point(171, 492);
+            this.CardCheckButton.Name = "CardCheckButton";
+            this.CardCheckButton.Size = new System.Drawing.Size(194, 66);
+            this.CardCheckButton.TabIndex = 13;
+            this.CardCheckButton.Text = "Просмотр карточки";
+            this.CardCheckButton.UseVisualStyleBackColor = false;
+            this.CardCheckButton.Click += new System.EventHandler(this.CardCheckButton_Click);
             // 
             // label6
             // 
@@ -205,7 +208,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(601, 561);
+            this.panel2.Size = new System.Drawing.Size(600, 561);
             this.panel2.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -237,7 +240,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ReserveButton);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(279, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(318, 552);
@@ -248,7 +254,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(82, 41);
+            this.label3.Location = new System.Drawing.Point(75, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 29);
             this.label3.TabIndex = 6;
@@ -292,7 +298,7 @@
             // 
             this.DischargedButton.AutoSize = true;
             this.DischargedButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DischargedButton.Location = new System.Drawing.Point(51, 334);
+            this.DischargedButton.Location = new System.Drawing.Point(51, 323);
             this.DischargedButton.Name = "DischargedButton";
             this.DischargedButton.Size = new System.Drawing.Size(173, 29);
             this.DischargedButton.TabIndex = 4;
@@ -336,7 +342,32 @@
             this.ReservedButton.Text = "Зарезервировано";
             this.ReservedButton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 87);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(312, 373);
+            this.dataGridView1.TabIndex = 7;
+            // 
+            // ReserveButton
+            // 
+            this.ReserveButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ReserveButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ReserveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReserveButton.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ReserveButton.Location = new System.Drawing.Point(0, 485);
+            this.ReserveButton.Name = "ReserveButton";
+            this.ReserveButton.Size = new System.Drawing.Size(318, 67);
+            this.ReserveButton.TabIndex = 8;
+            this.ReserveButton.Text = "Зарезервировать";
+            this.ReserveButton.UseVisualStyleBackColor = false;
+            this.ReserveButton.Click += new System.EventHandler(this.ReserveButton_Click);
+            // 
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -344,7 +375,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.GuestCardPanel);
-            this.Name = "Form1";
+            this.MaximizeBox = false;
+            this.Name = "MainMenu";
             this.Text = "MainMenu";
             this.GuestCardPanel.ResumeLayout(false);
             this.GuestCardPanel.PerformLayout();
@@ -358,6 +390,7 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -381,13 +414,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView StatusDataGridView;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CardCheckButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox FIOTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker CheckOutDateTimePicker;
         private System.Windows.Forms.DateTimePicker CheckInDateTimePicker;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button ReserveButton;
     }
 }
 

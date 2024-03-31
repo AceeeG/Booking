@@ -19,7 +19,7 @@ namespace Booking
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            Form1 menu = new Form1();
+            MainMenu menu = new MainMenu();
             this.Hide();
             menu.Show();
         }

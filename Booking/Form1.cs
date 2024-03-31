@@ -10,17 +10,24 @@ using System.Windows.Forms;
 
 namespace Booking
 {
-    public partial class Form1 : Form
+    public partial class MainMenu : Form
     {
-        public Form1()
+        public MainMenu()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CardCheckButton_Click(object sender, EventArgs e)
         {
             Card card = new Card();
-            card.Show();
+            card.ShowDialog();
+        }
+
+
+        private void ReserveButton_Click(object sender, EventArgs e)
+        {
+            ReserveCard card = new ReserveCard();
+            card.ShowDialog();
         }
     }
 }

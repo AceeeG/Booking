@@ -32,13 +32,12 @@
             this.FIOTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BirthDayDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.PaymentDataGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.GoBackButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.PaymentDataGridView)).BeginInit();
+            this.PaymentTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +58,7 @@
             this.FIOTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FIOTextBox.Location = new System.Drawing.Point(104, 41);
             this.FIOTextBox.Name = "FIOTextBox";
+            this.FIOTextBox.ReadOnly = true;
             this.FIOTextBox.Size = new System.Drawing.Size(305, 27);
             this.FIOTextBox.TabIndex = 13;
             // 
@@ -81,17 +81,6 @@
             this.BirthDayDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.BirthDayDateTimePicker.TabIndex = 15;
             // 
-            // PaymentDataGridView
-            // 
-            this.PaymentDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PaymentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PaymentDataGridView.Location = new System.Drawing.Point(120, 189);
-            this.PaymentDataGridView.Name = "PaymentDataGridView";
-            this.PaymentDataGridView.RowHeadersWidth = 51;
-            this.PaymentDataGridView.RowTemplate.Height = 24;
-            this.PaymentDataGridView.Size = new System.Drawing.Size(288, 36);
-            this.PaymentDataGridView.TabIndex = 16;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -108,6 +97,7 @@
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(31, 307);
             this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.ReadOnly = true;
             this.numericUpDown1.Size = new System.Drawing.Size(139, 22);
             this.numericUpDown1.TabIndex = 18;
             // 
@@ -145,18 +135,27 @@
             this.GoBackButton.UseVisualStyleBackColor = false;
             this.GoBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
             // 
+            // PaymentTextBox
+            // 
+            this.PaymentTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PaymentTextBox.Location = new System.Drawing.Point(116, 194);
+            this.PaymentTextBox.Name = "PaymentTextBox";
+            this.PaymentTextBox.ReadOnly = true;
+            this.PaymentTextBox.Size = new System.Drawing.Size(293, 27);
+            this.PaymentTextBox.TabIndex = 22;
+            // 
             // Card
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(433, 472);
+            this.Controls.Add(this.PaymentTextBox);
             this.Controls.Add(this.GoBackButton);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.PaymentDataGridView);
             this.Controls.Add(this.BirthDayDateTimePicker);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FIOTextBox);
@@ -164,7 +163,6 @@
             this.MaximizeBox = false;
             this.Name = "Card";
             this.Text = "Card";
-            ((System.ComponentModel.ISupportInitialize)(this.PaymentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -177,11 +175,11 @@
         private System.Windows.Forms.TextBox FIOTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker BirthDayDateTimePicker;
-        private System.Windows.Forms.DataGridView PaymentDataGridView;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button GoBackButton;
+        private System.Windows.Forms.TextBox PaymentTextBox;
     }
 }
