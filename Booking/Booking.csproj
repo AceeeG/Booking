@@ -105,6 +105,7 @@
     <EmbeddedResource Include="ReserveCard.resx">
       <DependentUpon>ReserveCard.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Booking.db" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

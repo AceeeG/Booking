@@ -26,8 +26,8 @@ namespace Booking
             if(!String.IsNullOrEmpty(FIOTextBox.Text) && !String.IsNullOrEmpty(PaymentTextBox.Text) && DaysChanger.Value != 0)
             {
                 User user = new User(FIOTextBox.Text, BirthDayDateTimePicker.Value.ToString(), Convert.ToInt32(PaymentTextBox.Text), Convert.ToInt32(DaysChanger.Value), Convert.ToInt32(AnimalCheckBox.Checked));
-                db.Users.Add(user);
-                db.SaveChanges();
+                db.Booking.Add(user);
+                
                 this.Hide();
                 MessageBox.Show("Номер зарезервирован");
             }

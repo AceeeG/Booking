@@ -111,18 +111,8 @@ namespace Booking
             this.money = money;
             this.days = days;
             withAnimals = WithAnimals;
-            if(days > 1)
-            {
-                state = "Зарезервировано";
-            }
-            if (days > 0)
-            {
-                state = "Выписываются";
-            }
-            if (days == 0)
-            {
-                state = "Свободны";
-            }
+            come = DateTime.Now.ToString();
+ 
 
 
         }

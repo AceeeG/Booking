@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.GuestCardPanel = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,6 +45,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ReserveButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -52,16 +55,16 @@
             this.BuzyButton = new System.Windows.Forms.RadioButton();
             this.AvailableButton = new System.Windows.Forms.RadioButton();
             this.ReservedButton = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ReserveButton = new System.Windows.Forms.Button();
+            this.TimerLabel = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.GuestCardPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StatusDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // GuestCardPanel
@@ -183,7 +186,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox1.Location = new System.Drawing.Point(115, 76);
+            this.pictureBox1.Location = new System.Drawing.Point(120, 76);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(165, 148);
             this.pictureBox1.TabIndex = 8;
@@ -249,6 +252,30 @@
             this.panel1.Size = new System.Drawing.Size(318, 552);
             this.panel1.TabIndex = 7;
             // 
+            // ReserveButton
+            // 
+            this.ReserveButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ReserveButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ReserveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReserveButton.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ReserveButton.Location = new System.Drawing.Point(0, 485);
+            this.ReserveButton.Name = "ReserveButton";
+            this.ReserveButton.Size = new System.Drawing.Size(318, 67);
+            this.ReserveButton.TabIndex = 8;
+            this.ReserveButton.Text = "Зарезервировать";
+            this.ReserveButton.UseVisualStyleBackColor = false;
+            this.ReserveButton.Click += new System.EventHandler(this.ReserveButton_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 87);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(312, 373);
+            this.dataGridView1.TabIndex = 7;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -272,6 +299,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel3.Controls.Add(this.TimerLabel);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.DischargedButton);
             this.panel3.Controls.Add(this.BuzyButton);
@@ -342,30 +370,21 @@
             this.ReservedButton.Text = "Зарезервировано";
             this.ReservedButton.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // TimerLabel
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 87);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(312, 373);
-            this.dataGridView1.TabIndex = 7;
+            this.TimerLabel.AutoSize = true;
+            this.TimerLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.TimerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TimerLabel.Location = new System.Drawing.Point(36, 3);
+            this.TimerLabel.Name = "TimerLabel";
+            this.TimerLabel.Size = new System.Drawing.Size(74, 25);
+            this.TimerLabel.TabIndex = 6;
+            this.TimerLabel.Text = "Время";
             // 
-            // ReserveButton
+            // timer1
             // 
-            this.ReserveButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ReserveButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ReserveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ReserveButton.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.ReserveButton.Location = new System.Drawing.Point(0, 485);
-            this.ReserveButton.Name = "ReserveButton";
-            this.ReserveButton.Size = new System.Drawing.Size(318, 67);
-            this.ReserveButton.TabIndex = 8;
-            this.ReserveButton.Text = "Зарезервировать";
-            this.ReserveButton.UseVisualStyleBackColor = false;
-            this.ReserveButton.Click += new System.EventHandler(this.ReserveButton_Click);
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MainMenu
             // 
@@ -378,6 +397,7 @@
             this.MaximizeBox = false;
             this.Name = "MainMenu";
             this.Text = "MainMenu";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.GuestCardPanel.ResumeLayout(false);
             this.GuestCardPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StatusDataGridView)).EndInit();
@@ -388,9 +408,9 @@
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -423,6 +443,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button ReserveButton;
+        private System.Windows.Forms.Label TimerLabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

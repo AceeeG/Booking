@@ -8,7 +8,7 @@ namespace Booking
 {
     internal class UsersContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> Booking { get; set; }
 
         public UsersContext() : base("DefaultConnection") 
         {

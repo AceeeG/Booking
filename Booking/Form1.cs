@@ -29,5 +29,16 @@ namespace Booking
             ReserveCard card = new ReserveCard();
             card.ShowDialog();
         }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimerLabel.Text = DateTime.Now.ToString();
+        }
     }
+
 }
